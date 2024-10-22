@@ -15,7 +15,7 @@ public class BestGymEver {
         String input = scanner.nextLine();
 
         try {
-            // Lagrar och läser in kundlistan (från fil)
+            // Lagrar och läser in kundlista (från fil)
             List<Customer> customers = readCustomersFromFile(DataFile);
 
             // Kontrollera om kund finns
