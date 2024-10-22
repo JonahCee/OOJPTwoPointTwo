@@ -18,7 +18,7 @@ public class BestGymEver {
             // Lagrar och läser in kundlista (från fil)
             List<Customer> customers = readCustomersFromFile(DataFile);
 
-            // Kontrollera om kund finns
+            // Kontrollera om kund (inte) finns
             Optional<Customer> customer = findCustomer(customers, input);
             if (customer.isPresent()) {
                 checkMembershipStatus(customer.get());
@@ -30,7 +30,7 @@ public class BestGymEver {
         }
     }
 
-    // Metod som läser in kundinformation från fil
+    // Läser in kundinformation från fil
     private static List<Customer> readCustomersFromFile(String filePath) throws IOException {
         List<Customer> customers = new ArrayList<>(); //lagra varje kund
         List<String> lines = Files.readAllLines(Paths.get(filePath)); //läser in alla rader från filen
@@ -79,6 +79,7 @@ public class BestGymEver {
 
 
 
+
 // Klass för att hantera kunddata
 class Customer {
     private String personNummer;
@@ -92,7 +93,6 @@ class Customer {
         this.lastPaymentDate = lastPaymentDate;
     }
 
-    // Getters
     protected String getPersonNummer() {
         return personNummer;
     }
